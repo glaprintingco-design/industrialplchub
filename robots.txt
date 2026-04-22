@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /*.pdf$
+Sitemap: https://www.industrialplchub.com/sitemap.xml
