@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /*.pdf$
 Sitemap: https://www.industrialplchub.com/sitemap.xml
+Sitemap: https://www.industrialplchub.com/blog/sitemap_blog.xml

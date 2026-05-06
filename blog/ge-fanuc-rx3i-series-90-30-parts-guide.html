@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules | IndustrialPLCHub</title>
+    <meta name="description" content="Reference for GE Fanuc RX3i (IC695) and Series 90-30 (IC693) — CPUs, power supplies, I/O modules, communication cards and end-of-life sourcing.">
+    <meta name="keywords" content="ge fanuc rx3i, series 90-30, ic695, ic693">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="qE4-TWqedGgbRFMc5S4NsXt-HXlgObut4GYvlOUxPWo">
+    <link rel="canonical" href="https://www.industrialplchub.com/blog/ge-fanuc-rx3i-series-90-30-parts-guide.html">
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="article">
+    <meta property="og:title"       content="GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules">
+    <meta property="og:description" content="Reference for GE Fanuc RX3i (IC695) and Series 90-30 (IC693) — CPUs, power supplies, I/O modules, communication cards and end-of-life sourcing.">
+    <meta property="og:url"         content="https://www.industrialplchub.com/blog/ge-fanuc-rx3i-series-90-30-parts-guide.html">
+    <meta property="og:site_name"   content="IndustrialPLCHub">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R84J2YNCVW"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R84J2YNCVW');</script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules", "description": "Reference for GE Fanuc RX3i (IC695) and Series 90-30 (IC693) \u2014 CPUs, power supplies, I/O modules, communication cards and end-of-life sourcing.", "datePublished": "2026-05-06", "dateModified": "2026-05-06", "author": {"@type": "Organization", "name": "IndustrialPLCHub"}, "publisher": {"@type": "Organization", "name": "IndustrialPLCHub", "url": "https://www.industrialplchub.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.industrialplchub.com/blog/ge-fanuc-rx3i-series-90-30-parts-guide.html"}, "keywords": "ge fanuc rx3i, series 90-30, ic695, ic693"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.industrialplchub.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.industrialplchub.com/blog/index.html"}, {"@type": "ListItem", "position": 3, "name": "GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules"}]}</script>
+
+    
+<style>
+    /* ── Reset & Base ── */
+    * { box-sizing: border-box; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0;
+           background-color: #f8f9fa; color: #2d3748; line-height: 1.7; }
+    a { text-decoration: none; color: #0056b3; transition: 0.3s; }
+    a:hover { opacity: 0.85; }
+    img { max-width: 100%; height: auto; }
+
+    /* ── Navbar (idéntico a organizador.py del IndustrialPLCHub) ── */
+    .navbar { background-color: #111; color: #fff; padding: 15px 0; position: sticky;
+              top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .navbar .container { display: flex; justify-content: space-between; align-items: center;
+                         max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+    .brand { display: flex; align-items: center; font-size: 1.8em; font-weight: 800;
+             color: #fff; text-transform: uppercase; letter-spacing: -0.5px; white-space: nowrap; }
+    .brand .brand-plc { color: #4dabff; }
+    .nav-logo { height: 105px; width: auto; margin-right: 15px; flex-shrink: 0; }
+    .nav-links a { color: #ffffff; margin-left: 20px; font-size: 0.9em;
+                   font-weight: 600; text-transform: uppercase; }
+    .nav-links a:hover { color: #4dabff; }
+
+    /* ── Layout blog ── */
+    .blog-wrapper { display: grid; grid-template-columns: 1fr 320px; gap: 40px;
+                    max-width: 1240px; margin: 40px auto; padding: 0 20px; }
+    .blog-article { background: #fff; border-radius: 8px; padding: 40px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+    /* ── Tipografía artículo ── */
+    .blog-article h1 { font-size: 2.2em; color: #1a202c; margin-top: 0;
+                       line-height: 1.2; font-weight: 800; letter-spacing: -0.5px; }
+    .blog-article h2 { font-size: 1.45em; border-bottom: 2px solid #0056b3;
+                       padding-bottom: 8px; margin-top: 40px; color: #1a202c; }
+    .blog-article h3 { font-size: 1.15em; margin-top: 25px; color: #2d3748; }
+    .blog-article p  { color: #4a5568; margin-bottom: 1rem; }
+    .blog-article ul, .blog-article ol { color: #4a5568; margin-bottom: 1rem; padding-left: 1.5rem; }
+    .blog-article li { margin-bottom: 0.4rem; }
+
+    /* ── Post meta y breadcrumb ── */
+    .post-meta { font-size: 0.85em; color: #718096; margin-bottom: 30px;
+                 border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;
+                 display: flex; gap: 15px; flex-wrap: wrap; }
+    .post-meta span::before { content: "· "; }
+    .post-meta span:first-child::before { content: ""; }
+    .breadcrumb { font-size: 0.85em; color: #718096; margin-bottom: 15px; }
+    .breadcrumb a { color: #0056b3; }
+
+    /* ── TOC ── */
+    .toc { background: #f7fafc; padding: 20px 25px; border-radius: 8px;
+           border: 1px solid #e2e8f0; margin-bottom: 35px; }
+    .toc h3 { margin-top: 0; font-size: 0.9em; text-transform: uppercase;
+              letter-spacing: 0.5px; color: #4a5568; }
+    .toc ol { margin: 0; padding-left: 1.3rem; }
+    .toc li { margin-bottom: 5px; font-size: 0.93em; }
+
+    /* ── Tablas ── */
+    .spec-table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 0.9em; }
+    .spec-table th { background: #1a202c; color: #fff; padding: 12px 14px; text-align: left; }
+    .spec-table td { padding: 11px 14px; border-bottom: 1px solid #e2e8f0; }
+    .spec-table tr:nth-child(even) td { background: #f8fafc; }
+
+    /* ── Callouts ── */
+    .callout { background: #eff6ff; border-left: 5px solid #0056b3; padding: 18px 22px;
+               border-radius: 0 8px 8px 0; margin: 30px 0; }
+    .callout strong { color: #0056b3; display: block; margin-bottom: 5px;
+                      text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.3px; }
+    .callout p { margin: 0; color: #2d3748; }
+    .callout-warning { background: #fffaf0; border-left-color: #c05621; }
+    .callout-warning strong { color: #c05621; }
+
+    /* ── Related products grid ── */
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                    gap: 18px; margin-top: 25px; }
+    .related-card { border: 1px solid #e2e8f0; padding: 18px; border-radius: 8px;
+                    background: #fff; transition: 0.2s; }
+    .related-card:hover { border-color: #0056b3; transform: translateY(-3px);
+                           box-shadow: 0 6px 18px rgba(0,86,179,0.12); }
+
+    /* ── FAQ ── */
+    .faq-section { margin-top: 40px; }
+    .faq-item { border-bottom: 1px solid #e2e8f0; }
+    .faq-input { display: none; }
+    .faq-question { font-weight: 700; cursor: pointer; padding: 16px 35px 16px 0;
+                    display: block; position: relative; color: #1a202c; font-size: 0.97em; }
+    .faq-question::after { content: '+'; position: absolute; right: 8px; top: 16px;
+                           color: #0056b3; font-size: 1.3em; line-height: 1; }
+    .faq-input:checked + .faq-question::after { content: '−'; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #4a5568; }
+    .faq-input:checked + .faq-question + .faq-answer { max-height: 600px; padding-bottom: 18px; }
+
+    /* ── Sidebar ── */
+    .blog-sidebar { display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-widget { background: #fff; padding: 22px; border-radius: 8px;
+                      box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .sidebar-widget h3 { font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px;
+                         color: #1a202c; border-bottom: 2px solid #0056b3;
+                         padding-bottom: 10px; margin-top: 0; margin-bottom: 14px; }
+    .sidebar-widget ul { list-style: none; padding: 0; margin: 0; }
+    .sidebar-widget li { padding: 10px 0; border-bottom: 1px solid #f1f5f9;
+                         font-size: 0.88em; line-height: 1.4; }
+    .sidebar-widget li:last-child { border-bottom: none; }
+    .sidebar-widget li a { color: #2d3748; }
+    .sidebar-widget li a:hover { color: #0056b3; }
+    .sidebar-cta { background: linear-gradient(135deg, #0056b3 0%, #004494 100%) !important; color: #fff; }
+    .sidebar-cta h3 { color: #fff !important; border-color: rgba(255,255,255,0.4) !important; }
+    .sidebar-cta p { font-size: 0.87em; opacity: 0.9; margin: 0 0 14px; line-height: 1.5; color: #fff; }
+    .sidebar-cta a { display: inline-block; background: #fff; color: #0056b3;
+                     padding: 9px 18px; border-radius: 4px; font-weight: 700;
+                     font-size: 0.88em; }
+
+    /* ── Footer (idéntico a organizador.py del IndustrialPLCHub) ── */
+    footer { background-color: #1a1a1a; color: #bbb; padding: 50px 0; margin-top: 60px;
+             font-size: 0.9em; border-top: 4px solid #0056b3; text-align: center; }
+    footer .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    footer h2 { color: #ddd; margin-bottom: 10px; text-transform: uppercase;
+                letter-spacing: 1px; font-size: 1.1em; }
+    footer .legal-links { display: flex; justify-content: center; gap: 20px;
+                          margin-top: 20px; flex-wrap: wrap; }
+    footer .legal-links a { color: #ccc; border-bottom: 1px dotted #555; }
+    footer .legal-links a:hover { color: #fff; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+        .blog-wrapper { grid-template-columns: 1fr; }
+        .blog-sidebar { display: none; }
+        .blog-article { padding: 22px; }
+        .blog-article h1 { font-size: 1.7em; }
+        .navbar .container { flex-direction: column; gap: 12px; }
+        .nav-logo { height: 80px; }
+        .brand { font-size: 1.4em; flex-direction: column; gap: 0; line-height: 1.1; text-align: center; white-space: normal; }
+        .brand-line1 { display: block; letter-spacing: 1px; }
+        .brand-line2 { display: block; }
+        .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .nav-links a { margin: 0; font-size: 0.85em; }
+        .spec-table { font-size: 0.82em; }
+        .related-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
+        .related-grid { grid-template-columns: 1fr; }
+    }
+</style>
+
+</head>
+<body>
+
+
+<nav class="navbar">
+    <div class="container">
+        <a href="../index.html" class="brand">
+            <img src="../logo.png" alt="IndustrialPLCHub Logo" class="nav-logo">
+            <span class="brand-line1">Industrial</span><span class="brand-line2"><span class="brand-plc">PLC</span>Hub</span>
+        </a>
+        <div class="nav-links">
+            <a href="../index.html">Catalog</a>
+            <a href="index.html">Blog</a>
+            <a href="../about.html">About Us</a>
+        </div>
+    </div>
+</nav>
+
+<div class="blog-wrapper">
+
+    <!-- ── ARTÍCULO ── -->
+    <article class="blog-article">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo;
+            <a href="index.html">Blog</a> &rsaquo;
+            GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules
+        </div>
+
+        <h1>GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules</h1>
+
+        <div class="post-meta">
+            <span>By IndustrialPLCHub Engineering Team</span>
+            <span>May 06, 2026</span>
+            <span>GE Fanuc</span>
+            <span>~1000 words</span>
+        </div>
+
+        <nav class="toc">
+    <h3>In This Guide</h3>
+    <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#ge-fanuc-rx3i">GE Fanuc RX3i: A Modern PAC Solution</a></li>
+        <li><a href="#series-90-30">Series 90-30: Legacy PLC Considerations</a></li>
+        <li><a href="#specs">Technical Specifications</a></li>
+        <li><a href="#migration-strategy">Migration Strategy</a></li>
+        <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+    </ol>
+</nav>
+
+<h2 id="overview">Overview</h2>
+In the realm of industrial automation, the transition from legacy systems to modern solutions is a critical consideration for plant managers and controls engineers. The GE Fanuc RX3i PAC and the legacy Series 90-30 PLC are two pivotal products in this landscape, often central to migration strategies. Understanding the technical nuances and strategic implications of replacing or upgrading these systems can significantly impact operational efficiency and downtime risk.
+
+<h2 id="ge-fanuc-rx3i">GE Fanuc RX3i: A Modern PAC Solution</h2>
+The GE Fanuc RX3i PAC stands out as a robust, scalable solution for complex control applications. It supports advanced programming languages in line with IEC 61131-3 standards, offering ladder logic, function block, and structured text capabilities. The RX3i is designed to integrate seamlessly with various industrial networks, supporting protocols such as EtherNet/IP, Modbus TCP, and PROFINET.
+
+<div class="callout">
+    <strong>Engineering Tip:</strong>
+    <p>When configuring your RX3i, leverage the flexibility of its dual backplane architecture to segregate different communication protocols, minimizing cross-interference and optimizing network performance.</p>
+</div>
+
+For those transitioning from a Series 90-30, the RX3i offers backward compatibility with many existing modules, easing the migration process and reducing the need for extensive rewiring or reprogramming.
+
+<h2 id="series-90-30">Series 90-30: Legacy PLC Considerations</h2>
+The Series 90-30 system, while robust and reliable, is reaching the end of its lifecycle. Plant managers must weigh the benefits of like-for-like replacements against the potential for enhanced capabilities with newer systems like the RX3i. One of the primary concerns with maintaining a 90-30 system is the availability of spare parts and the risk of downtime due to component failures.
+
+<div class="callout callout-warning">
+    <strong>Warning:</strong>
+    <p>Continued reliance on end-of-life parts for the Series 90-30 increases the risk of prolonged downtime. Consider proactive migration to avoid operational disruptions.</p>
+</div>
+
+For facilities still operating with IC693 modules, it is vital to develop a strategic spare parts inventory to mitigate risks associated with part obsolescence.
+
+<h2 id="specs">Technical Specifications</h2>
+Here's a comparison of key specifications between the RX3i and Series 90-30 systems:
+
+<table class="spec-table">
+    <thead>
+        <tr>
+            <th>Specification</th>
+            <th>GE Fanuc RX3i</th>
+            <th>Series 90-30</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CPU Memory</td>
+            <td>64 MB (IC695CPE310)</td>
+            <td>32 KB (IC693CPU331)</td>
+        </tr>
+        <tr>
+            <td>Scan Time</td>
+            <td>0.15 ms/K</td>
+            <td>0.22 ms/K</td>
+        </tr>
+        <tr>
+            <td>I/O Capacity</td>
+            <td>Up to 32 slots</td>
+            <td>Up to 8 slots</td>
+        </tr>
+        <tr>
+            <td>Communication Ports</td>
+            <td>EtherNet, RS-232, RS-485</td>
+            <td>RS-232, RS-485</td>
+        </tr>
+        <tr>
+            <td>Voltage</td>
+            <td>24 VDC</td>
+            <td>120/240 VAC</td>
+        </tr>
+        <tr>
+            <td>Current Draw</td>
+            <td>1.5 A</td>
+            <td>2 A</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="migration-strategy">Migration Strategy</h2>
+Upgrading from a Series 90-30 to an RX3i system can be daunting. A phased migration approach is often optimal, allowing for gradual integration and minimal disruption. Utilizing software tools like Proficy Machine Edition can streamline the transition, offering conversion utilities to adapt existing ladder logic programs to the new platform.
+
+When planning your migration, consider the following:
+
+- **Assess Current System Needs:** Evaluate the current load and expected future expansion to determine the appropriate RX3i configuration.
+- **Plan for Network Integration:** Ensure that new communication protocols like PROFINET can be accommodated within your existing infrastructure.
+- **Test and Validate:** Conduct thorough testing in a controlled environment before full-scale deployment to ensure compatibility and performance.
+
+<div class="faq-section">
+    <div class="faq-item">
+        <input type="checkbox" id="q1" class="faq-input">
+        <label for="q1" class="faq-question">What are the benefits of upgrading to the RX3i?</label>
+        <div class="faq-answer">
+            <p>The RX3i offers increased CPU memory, faster scan times, expanded I/O capacity, and enhanced communication options, making it ideal for complex control applications.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <input type="checkbox" id="q2" class="faq-input">
+        <label for="q2" class="faq-question">Can existing Series 90-30 modules be used with the RX3i?</label>
+        <div class="faq-answer">
+            <p>Yes, many Series 90-30 modules are compatible with the RX3i, allowing for a smoother transition with minimal hardware changes.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <input type="checkbox" id="q3" class="faq-input">
+        <label for="q3" class="faq-question">What software is recommended for programming the RX3i?</label>
+        <div class="faq-answer">
+            <p>Proficy Machine Edition is recommended for programming the RX3i, offering a comprehensive suite for control and monitoring.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <input type="checkbox" id="q4" class="faq-input">
+        <label for="q4" class="faq-question">How can I mitigate downtime during the migration?</label>
+        <div class="faq-answer">
+            <p>Implement a phased migration strategy and conduct extensive testing to ensure seamless integration and minimize operational disruptions.</p>
+        </div>
+    </div>
+</div>
+
+        <!-- ── Bloque de productos reales ── -->
+        <h2 id="listings">Find These Modules on IndustrialPLCHub</h2>
+        <p>Browse our verified inventory of GE Fanuc components sourced from trusted eBay sellers:</p>
+        <div class="related-grid">
+            <p>Browse our full catalog for related industrial modules.</p>
+        </div>
+
+    </article>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="blog-sidebar">
+
+        <div class="sidebar-widget sidebar-cta">
+            <h3>Browse GE Fanuc Modules</h3>
+            <p>Verified listings sourced from eBay sellers — updated regularly.</p>
+            <a href="../ge-fanuc.html">View Full Catalog →</a>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>More Guides</h3>
+            <ul><li><a href="allen-bradley-controllogix-1756-parts-guide.html">Allen-Bradley ControlLogix 1756: Complete Parts & Modules Guide</a></li>
+<li><a href="allen-bradley-compactlogix-1769-modules-guide.html">Allen-Bradley CompactLogix 1769: Processors & I/O Modules Reference</a></li>
+<li><a href="siemens-simatic-s7-300-400-parts-guide.html">Siemens SIMATIC S7-300 & S7-400: Legacy PLC Replacement Parts</a></li>
+<li><a href="siemens-s7-1200-vs-s7-1500-comparison.html">Siemens S7-1200 vs S7-1500: Which TIA Portal PLC Fits Your Application?</a></li>
+<li><a href="modicon-quantum-m340-parts-reference.html">Modicon Quantum 140 & M340: Schneider Electric Legacy PLC Parts</a></li>
+<li><a href="allen-bradley-1747-l531-slc-500-deep-dive.html">Allen-Bradley 1747-L531 SLC 500: Processor Specs & Sourcing Guide</a></li>
+<li><a href="omron-cj2m-sysmac-nj-parts-guide.html">Omron CJ2M & Sysmac NJ: PLC Parts and Module Reference</a></li>
+</ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>Popular Brands</h3>
+            <ul>
+        <li><a href="../allen-bradley.html">Allen-Bradley Parts</a></li>
+        <li><a href="../siemens.html">Siemens SIMATIC Parts</a></li>
+        <li><a href="../modicon.html">Modicon Parts</a></li>
+        <li><a href="../ge-fanuc.html">GE Fanuc Parts</a></li>
+        <li><a href="../omron.html">Omron Parts</a></li>
+        <li><a href="../schneider.html">Schneider Electric Parts</a></li>
+        <li><a href="../mitsubishi.html">Mitsubishi Parts</a></li></ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>Affiliate Disclosure</h3>
+            <p style="font-size:0.82em; color:#4a5568; line-height:1.5;">
+                IndustrialPLCHub participates in the eBay Partner Network.
+                Links may earn us a small commission at no extra cost to you.
+                <a href="../disclosure.html">Learn more</a>.
+            </p>
+        </div>
+
+    </aside>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div style="margin-bottom: 30px;">
+            <img src="../logo.png" alt="Logo" style="height:72px; opacity:0.6; margin-bottom:15px;">
+            <h2>About IndustrialPLCHub</h2>
+            <p>Trusted resource for legacy industrial automation parts sourced from verified eBay listings.<br>
+               Helping plant managers and automation engineers keep production lines running.</p>
+        </div>
+        <div class="legal-links">
+            <a href="../terms.html">Terms of Service</a>
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../disclosure.html">Affiliate Disclosure</a>
+        </div>
+        <div style="margin-top: 30px; font-size: 0.8em; opacity: 0.85;">
+            &copy; 2026 IndustrialPLCHub. Not affiliated with Allen-Bradley, Rockwell, Siemens,
+            Schneider, GE Fanuc or any listed brand.<br>
+            eBay affiliate links — we may earn a commission at no extra cost to you.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
