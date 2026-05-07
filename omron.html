@@ -122,6 +122,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #0056b3;
+            box-shadow: 0 2px 10px rgba(0,86,179,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #f0f6ff;
+            border: 1px solid #b3d0f5;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: box-shadow 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { box-shadow: 0 6px 12px rgba(0,86,179,0.3); }
+    </style>
 </head>
 <body>
     
@@ -140,11 +195,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Omron</span></p>
-        <h1 style="border-bottom:4px solid #0056b3;padding-bottom:10px;margin-bottom:30px;">Omron Parts Catalog</h1>
-        <p class="lead">Browsing 27 verified items available for industrial facilities.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Omron</span></p>
+        <h1 style="border-bottom:4px solid #0056b3;padding-bottom:10px;margin-bottom:20px;">Omron Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 27 verified items. Search by part number or model:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Omron part number (e.g. Unit)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Omron part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cj1w-etn21 ethernet unit">
             <a href="omron-cj1w-etn21-100.html"><img src="https://i.ebayimg.com/images/g/NEQAAeSwt7NojPtZ/s-l225.jpg" alt="Omron CJ1W-ETN21 Ethernet Unit - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj1w-etn21-100.html">Omron CJ1W-ETN21 Ethernet Unit</a></div>
@@ -152,7 +225,7 @@
                 <a href="omron-cj1w-etn21-100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cj1w-ii101 plc expansion i/o module">
             <a href="omron-cj1w-ii101.html"><img src="https://i.ebayimg.com/images/g/Er4AAeSwyVdpwyWO/s-l225.jpg" alt="Omron CJ1W-II101 PLC Expansion I/O Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj1w-ii101.html">Omron CJ1W-II101 PLC Expansion I/O Module</a></div>
@@ -160,7 +233,7 @@
                 <a href="omron-cj1w-ii101.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cj1w-mad42 plc analog module">
             <a href="omron-cj1w-mad42-cj1wmad42.html"><img src="https://i.ebayimg.com/images/g/x80AAOSwsEpia-wK/s-l225.jpg" alt="Omron CJ1W-MAD42 PLC Analog Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj1w-mad42-cj1wmad42.html">Omron CJ1W-MAD42 PLC Analog Module</a></div>
@@ -168,7 +241,7 @@
                 <a href="omron-cj1w-mad42-cj1wmad42.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cj1w-md233 plc mixed i/o module">
             <a href="omron-cj1w-md233.html"><img src="https://i.ebayimg.com/images/g/HUkAAeSwKE5p5PCO/s-l225.jpg" alt="OMRON CJ1W-MD233 PLC Mixed I/O Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj1w-md233.html">OMRON CJ1W-MD233 PLC Mixed I/O Module</a></div>
@@ -176,7 +249,7 @@
                 <a href="omron-cj1w-md233.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron automation & safety cj1w-oc211 relay i/o module">
             <a href="omron-cj1w-oc211-cj1woc211.html"><img src="https://i.ebayimg.com/images/g/2kIAAOSwkcBa~DTY/s-l225.jpg" alt="OMRON Automation & Safety CJ1W-OC211 Relay I/O Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj1w-oc211-cj1woc211.html">OMRON Automation & Safety CJ1W-OC211 Relay I/O Module</a></div>
@@ -184,7 +257,7 @@
                 <a href="omron-cj1w-oc211-cj1woc211.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cj1w-od231 plc output i/o module">
             <a href="omron-cj1w-od231.html"><img src="https://i.ebayimg.com/images/g/434AAeSw8iBp5PBD/s-l225.jpg" alt="OMRON CJ1W-OD231 PLC Output I/O Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj1w-od231.html">OMRON CJ1W-OD231 PLC Output I/O Module</a></div>
@@ -192,7 +265,7 @@
                 <a href="omron-cj1w-od231.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cj1w-pa205r power supply unit">
             <a href="omron-cj1w-pa205r-cj1wpa205r.html"><img src="https://i.ebayimg.com/images/g/DVgAAOxyVaBSvUk6/s-l225.jpg" alt="OMRON CJ1W-PA205R Power Supply Unit - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj1w-pa205r-cj1wpa205r.html">OMRON CJ1W-PA205R Power Supply Unit</a></div>
@@ -200,7 +273,7 @@
                 <a href="omron-cj1w-pa205r-cj1wpa205r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cj2m-cpu32 sysmac cpu processor module">
             <a href="omron-cj2m-cpu32.html"><img src="https://i.ebayimg.com/images/g/dwwAAeSw~F5p5gAX/s-l225.jpg" alt="Omron CJ2M-CPU32 Sysmac CPU Processor Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cj2m-cpu32.html">Omron CJ2M-CPU32 Sysmac CPU Processor Module</a></div>
@@ -208,7 +281,7 @@
                 <a href="omron-cj2m-cpu32.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cp1e-n30dt-d programmable controller">
             <a href="omron-cp1e-n30dt-d-18in.html"><img src="https://i.ebayimg.com/images/g/E5YAAOSwj0Ra~DqI/s-l225.jpg" alt="OMRON CP1E-N30DT-D Programmable Controller - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cp1e-n30dt-d-18in.html">OMRON CP1E-N30DT-D Programmable Controller</a></div>
@@ -216,7 +289,7 @@
                 <a href="omron-cp1e-n30dt-d-18in.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cp1l-em40dt1-d plc module">
             <a href="omron-cp1l-em40dt1-d-cp1lem40dt1d.html"><img src="https://i.ebayimg.com/images/g/l0IAAeSw9Xlo-c22/s-l225.jpg" alt="Omron CP1L-EM40DT1-D PLC Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cp1l-em40dt1-d-cp1lem40dt1d.html">Omron CP1L-EM40DT1-D PLC Module</a></div>
@@ -224,7 +297,7 @@
                 <a href="omron-cp1l-em40dt1-d-cp1lem40dt1d.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cp1l-em40dt1-d">
             <a href="omron-cp1l-em40dt1-d.html"><img src="https://i.ebayimg.com/images/g/aP4AAOSwzHlmPzQu/s-l225.jpg" alt="Omron CP1L-EM40DT1-D - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cp1l-em40dt1-d.html">Omron CP1L-EM40DT1-D</a></div>
@@ -232,7 +305,7 @@
                 <a href="omron-cp1l-em40dt1-d.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron cqm1h-cpu21 processor/controller">
             <a href="omron-cpu21-cqm1h-cpu21.html"><img src="https://i.ebayimg.com/images/g/6GUAAOSwW6FmmOhX/s-l225.jpg" alt="Omron CQM1H-CPU21 Processor/Controller - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cpu21-cqm1h-cpu21.html">Omron CQM1H-CPU21 Processor/Controller</a></div>
@@ -240,7 +313,7 @@
                 <a href="omron-cpu21-cqm1h-cpu21.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron sysmac cs1g-cpu42 processor">
             <a href="omron-cs1g-cpu42.html"><img src="https://i.ebayimg.com/images/g/nKsAAeSwARhpe8Oa/s-l225.jpg" alt="Omron Sysmac CS1G-CPU42 Processor - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-cs1g-cpu42.html">Omron Sysmac CS1G-CPU42 Processor</a></div>
@@ -248,7 +321,7 @@
                 <a href="omron-cs1g-cpu42.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron drt1-id16-1">
             <a href="omron-drt1-id16-1.html"><img src="https://i.ebayimg.com/images/g/E7UAAeSwcGNohE9n/s-l225.jpg" alt="OMRON DRT1-ID16-1 - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-drt1-id16-1.html">OMRON DRT1-ID16-1</a></div>
@@ -256,7 +329,7 @@
                 <a href="omron-drt1-id16-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron grt1-ad2">
             <a href="omron-grt1-ad2-grt1ad2.html"><img src="https://i.ebayimg.com/images/g/4j8AAeSwHlhpdyFK/s-l225.jpg" alt="OMRON GRT1-AD2 - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-grt1-ad2-grt1ad2.html">OMRON GRT1-AD2</a></div>
@@ -264,7 +337,7 @@
                 <a href="omron-grt1-ad2-grt1ad2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron remote terminal ethercat gx-id1611 i/o module">
             <a href="omron-gx-id1611.html"><img src="https://i.ebayimg.com/images/g/s-8AAOSwZSVm8wo5/s-l225.jpg" alt="Omron Remote Terminal EtherCat GX-ID1611 I/O Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-gx-id1611.html">Omron Remote Terminal EtherCat GX-ID1611 I/O Module</a></div>
@@ -272,7 +345,7 @@
                 <a href="omron-gx-id1611.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron nj-pd3001 power supply unit">
             <a href="omron-nj-pd3001.html"><img src="https://i.ebayimg.com/images/g/6ooAAOSwCEVmuQtK/s-l225.jpg" alt="OMRON NJ-PD3001 Power Supply Unit - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-nj-pd3001.html">OMRON NJ-PD3001 Power Supply Unit</a></div>
@@ -280,7 +353,7 @@
                 <a href="omron-nj-pd3001.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron nj101-9000 plc cpu processor">
             <a href="omron-nj101-9000.html"><img src="https://i.ebayimg.com/images/g/IuwAAeSwPzJodd1S/s-l225.jpg" alt="OMRON NJ101-9000 PLC CPU Processor - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-nj101-9000.html">OMRON NJ101-9000 PLC CPU Processor</a></div>
@@ -288,7 +361,7 @@
                 <a href="omron-nj101-9000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron processor cpu unit nj301-1200">
             <a href="omron-nj301-1200.html"><img src="https://i.ebayimg.com/images/g/P9QAAeSwYONpansg/s-l225.jpg" alt="OMRON PROCESSOR CPU UNIT NJ301-1200 - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-nj301-1200.html">OMRON PROCESSOR CPU UNIT NJ301-1200</a></div>
@@ -296,7 +369,7 @@
                 <a href="omron-nj301-1200.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron nj501-1300 plc module">
             <a href="omron-nj501-1300-nj5011300.html"><img src="https://i.ebayimg.com/images/g/ZIcAAeSwgE5p3Ncm/s-l225.jpg" alt="OMRON NJ501-1300 PLC Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-nj501-1300-nj5011300.html">OMRON NJ501-1300 PLC Module</a></div>
@@ -304,7 +377,7 @@
                 <a href="omron-nj501-1300-nj5011300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron nx-da3203">
             <a href="omron-nx-da3203-nxda3203.html"><img src="https://i.ebayimg.com/images/g/jPUAAeSwb-xotdl4/s-l225.jpg" alt="OMRON NX-DA3203 - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-nx-da3203-nxda3203.html">OMRON NX-DA3203</a></div>
@@ -312,7 +385,7 @@
                 <a href="omron-nx-da3203-nxda3203.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron s82d-6024 power supply">
             <a href="omron-s82d-6024.html"><img src="https://i.ebayimg.com/images/g/lzcAAeSwSF1pvGB0/s-l225.jpg" alt="OMRON S82D-6024 Power Supply - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-s82d-6024.html">OMRON S82D-6024 Power Supply</a></div>
@@ -320,7 +393,7 @@
                 <a href="omron-s82d-6024.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron s82j-30024 power supply">
             <a href="omron-s82j-30024.html"><img src="https://i.ebayimg.com/images/g/O8YAAOSwaIhj0YHe/s-l225.jpg" alt="Omron S82J-30024 Power Supply - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-s82j-30024.html">Omron S82J-30024 Power Supply</a></div>
@@ -328,7 +401,7 @@
                 <a href="omron-s82j-30024.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron s8as-48008 power supply 24v dc 20a 480w">
             <a href="omron-s8as-48008-60.html"><img src="https://i.ebayimg.com/images/g/dG0AAeSwoTZo5Ybx/s-l225.jpg" alt="Omron S8AS-48008 Power Supply 24V DC 20A 480W - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-s8as-48008-60.html">Omron S8AS-48008 Power Supply 24V DC 20A 480W</a></div>
@@ -336,7 +409,7 @@
                 <a href="omron-s8as-48008-60.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron s8jx-p30024c power supply">
             <a href="omron-s8jx-p30024c.html"><img src="https://i.ebayimg.com/images/g/2XwAAeSwnjFpwmCz/s-l225.jpg" alt="OMRON S8JX-P30024C Power Supply - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-s8jx-p30024c.html">OMRON S8JX-P30024C Power Supply</a></div>
@@ -344,7 +417,7 @@
                 <a href="omron-s8jx-p30024c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron s8vm-10024cd switching power supply">
             <a href="omron-s8vm-10024cd.html"><img src="https://i.ebayimg.com/images/g/GwcAAOSw1fBmHUVL/s-l225.jpg" alt="OMRON S8VM-10024CD Switching Power Supply - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-s8vm-10024cd.html">OMRON S8VM-10024CD Switching Power Supply</a></div>
@@ -352,7 +425,7 @@
                 <a href="omron-s8vm-10024cd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="omron s8vs-09024 switching power supply">
             <a href="omron-s8vs-09024-100-240.html"><img src="https://i.ebayimg.com/images/g/hMAAAOSwpDdVWx8e/s-l225.jpg" alt="OMRON S8VS-09024 Switching Power Supply - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="omron-s8vs-09024-100-240.html">OMRON S8VS-09024 Switching Power Supply</a></div>
@@ -379,6 +452,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Omron";
+    var CAMPAIGN_ID = "5339150622";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID +
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

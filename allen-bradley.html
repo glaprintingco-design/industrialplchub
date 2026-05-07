@@ -122,6 +122,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #0056b3;
+            box-shadow: 0 2px 10px rgba(0,86,179,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #f0f6ff;
+            border: 1px solid #b3d0f5;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: box-shadow 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { box-shadow: 0 6px 12px rgba(0,86,179,0.3); }
+    </style>
 </head>
 <body>
     
@@ -140,11 +195,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Allen-Bradley</span></p>
-        <h1 style="border-bottom:4px solid #0056b3;padding-bottom:10px;margin-bottom:30px;">Allen-Bradley Parts Catalog</h1>
-        <p class="lead">Browsing 17 verified items available for industrial facilities.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Allen-Bradley</span></p>
+        <h1 style="border-bottom:4px solid #0056b3;padding-bottom:10px;margin-bottom:20px;">Allen-Bradley Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 17 verified items. Search by part number or model:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Allen-Bradley part number (e.g. Supply)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Allen-Bradley part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1606xle240e power supply">
             <a href="allen-bradley-1606xle240e.html"><img src="https://i.ebayimg.com/images/g/J2oAAeSwNiRp0EmY/s-l225.jpg" alt="Allen-Bradley 1606XLE240E Power Supply - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1606xle240e.html">Allen-Bradley 1606XLE240E Power Supply</a></div>
@@ -152,7 +225,7 @@
                 <a href="allen-bradley-1606xle240e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1746-a10 slc-500 plc chassis/rack">
             <a href="allen-bradley-1746-a10-slc-500.html"><img src="https://i.ebayimg.com/images/g/AtgAAeSwyXBp6QuY/s-l225.jpg" alt="Allen-Bradley 1746-A10 SLC-500 PLC Chassis/Rack - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1746-a10-slc-500.html">Allen-Bradley 1746-A10 SLC-500 PLC Chassis/Rack</a></div>
@@ -160,7 +233,7 @@
                 <a href="allen-bradley-1746-a10-slc-500.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1746-io12dc">
             <a href="allen-bradley-1746-io12dc-1746i012dc.html"><img src="https://i.ebayimg.com/images/g/kpcAAeSwfOJpOCAS/s-l225.jpg" alt="Allen-Bradley 1746-IO12DC - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1746-io12dc-1746i012dc.html">Allen-Bradley 1746-IO12DC</a></div>
@@ -168,7 +241,7 @@
                 <a href="allen-bradley-1746-io12dc-1746i012dc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1746-p2 power supply for slc 500 & 7 slot rack">
             <a href="allen-bradley-1746-p2-500.html"><img src="https://i.ebayimg.com/images/g/ax8AAeSw9cNp4nT6/s-l225.jpg" alt="Allen-Bradley 1746-P2 Power Supply for SLC 500 & 7 Slot Rack - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1746-p2-500.html">Allen-Bradley 1746-P2 Power Supply for SLC 500 & 7 Slot Rack</a></div>
@@ -176,7 +249,7 @@
                 <a href="allen-bradley-1746-p2-500.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1756-ia32 controllogix plc input module">
             <a href="allen-bradley-1756-ia32.html"><img src="https://i.ebayimg.com/images/g/ctIAAeSw0x1puCzF/s-l225.jpg" alt="Allen-Bradley 1756-IA32 ControlLogix PLC Input Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1756-ia32.html">Allen-Bradley 1756-IA32 ControlLogix PLC Input Module</a></div>
@@ -184,7 +257,7 @@
                 <a href="allen-bradley-1756-ia32.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1756-l62s controllogix guardlogix safety processor module">
             <a href="allen-bradley-1756-l62s.html"><img src="https://i.ebayimg.com/images/g/ojoAAeSw16pp5tH5/s-l225.jpg" alt="Allen-Bradley 1756-L62S ControlLogix GuardLogix Safety Processor Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1756-l62s.html">Allen-Bradley 1756-L62S ControlLogix GuardLogix Safety Processor Module</a></div>
@@ -192,7 +265,7 @@
                 <a href="allen-bradley-1756-l62s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1756-l71 controllogix logix5571 processor module">
             <a href="allen-bradley-1756-l71-logix5571.html"><img src="https://i.ebayimg.com/images/g/rdsAAeSwamJp8nnr/s-l225.jpg" alt="Allen-Bradley 1756-L71 ControlLogix Logix5571 Processor Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1756-l71-logix5571.html">Allen-Bradley 1756-L71 ControlLogix Logix5571 Processor Module</a></div>
@@ -200,7 +273,7 @@
                 <a href="allen-bradley-1756-l71-logix5571.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley controllogix 1756-l83e">
             <a href="allen-bradley-1756-l83e.html"><img src="https://i.ebayimg.com/images/g/X4QAAeSwY5xp9Pcz/s-l225.jpg" alt="Allen-Bradley ControlLogix 1756-L83E - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1756-l83e.html">Allen-Bradley ControlLogix 1756-L83E</a></div>
@@ -208,7 +281,7 @@
                 <a href="allen-bradley-1756-l83e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1756-pa75 controllogix ac power supply">
             <a href="allen-bradley-1756-pa75-1756pa75.html"><img src="https://i.ebayimg.com/images/g/f0AAAOSw5MxkehQN/s-l225.jpg" alt="Allen-Bradley 1756-PA75 ControlLogix AC Power Supply - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1756-pa75-1756pa75.html">Allen-Bradley 1756-PA75 ControlLogix AC Power Supply</a></div>
@@ -216,7 +289,7 @@
                 <a href="allen-bradley-1756-pa75-1756pa75.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley controllogix 1756-rio/b fw 3.1">
             <a href="allen-bradley-1756-rio.html"><img src="https://i.ebayimg.com/images/g/-dQAAeSw3Hxp4sZQ/s-l225.jpg" alt="Allen-Bradley ControlLogix 1756-RIO/B FW 3.1 - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1756-rio.html">Allen-Bradley ControlLogix 1756-RIO/B FW 3.1</a></div>
@@ -224,7 +297,7 @@
                 <a href="allen-bradley-1756-rio.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley power supply 1756pa75r series a 96360685 | pn-45344">
             <a href="allen-bradley-1756pa75r-96360685.html"><img src="https://i.ebayimg.com/images/g/CFEAAeSwuhVp6Wwh/s-l225.jpg" alt="Allen-Bradley Power Supply 1756PA75R Series A 96360685 | PN-45344 - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1756pa75r-96360685.html">Allen-Bradley Power Supply 1756PA75R Series A 96360685 | PN-45344</a></div>
@@ -232,7 +305,7 @@
                 <a href="allen-bradley-1756pa75r-96360685.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1768-l43 plc processor">
             <a href="allen-bradley-1768-l43.html"><img src="https://i.ebayimg.com/images/g/gtYAAeSwA7pp5tWC/s-l225.jpg" alt="Allen-Bradley 1768-L43 PLC Processor - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1768-l43.html">Allen-Bradley 1768-L43 PLC Processor</a></div>
@@ -240,7 +313,7 @@
                 <a href="allen-bradley-1768-l43.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1769-if4 plc input module">
             <a href="allen-bradley-1769-if4.html"><img src="https://i.ebayimg.com/images/g/RY4AAeSw6z9p5tcm/s-l225.jpg" alt="Allen-Bradley 1769-IF4 PLC Input Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1769-if4.html">Allen-Bradley 1769-IF4 PLC Input Module</a></div>
@@ -248,7 +321,7 @@
                 <a href="allen-bradley-1769-if4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley compactlogix plc processor module 1769-l18er-bb1b">
             <a href="allen-bradley-1769-l18er-bb1b.html"><img src="https://i.ebayimg.com/images/g/xOsAAeSwv5dp85Js/s-l225.jpg" alt="Allen-Bradley CompactLogix PLC Processor Module 1769-L18ER-BB1B - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1769-l18er-bb1b.html">Allen-Bradley CompactLogix PLC Processor Module 1769-L18ER-BB1B</a></div>
@@ -256,7 +329,7 @@
                 <a href="allen-bradley-1769-l18er-bb1b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1769-l33er compactlogix plc processor module">
             <a href="allen-bradley-1769-l33er.html"><img src="https://i.ebayimg.com/images/g/aPgAAeSwE2Fp8qr4/s-l225.jpg" alt="Allen-Bradley 1769-L33ER CompactLogix PLC Processor Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1769-l33er.html">Allen-Bradley 1769-L33ER CompactLogix PLC Processor Module</a></div>
@@ -264,7 +337,7 @@
                 <a href="allen-bradley-1769-l33er.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1769-ob16p">
             <a href="allen-bradley-1769-ob16p.html"><img src="https://i.ebayimg.com/images/g/LHQAAeSw3Wlp4odH/s-l225.jpg" alt="Allen-Bradley 1769-OB16P - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1769-ob16p.html">Allen-Bradley 1769-OB16P</a></div>
@@ -272,7 +345,7 @@
                 <a href="allen-bradley-1769-ob16p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="allen-bradley 1769-of8v compactlogix plc analog output module">
             <a href="allen-bradley-1769-of8v.html"><img src="https://i.ebayimg.com/images/g/IbEAAeSwU0pp8S2B/s-l225.jpg" alt="Allen-Bradley 1769-OF8V CompactLogix PLC Analog Output Module - Industrial Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="allen-bradley-1769-of8v.html">Allen-Bradley 1769-OF8V CompactLogix PLC Analog Output Module</a></div>
@@ -299,6 +372,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Allen-Bradley";
+    var CAMPAIGN_ID = "5339150622";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID +
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>
