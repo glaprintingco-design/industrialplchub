@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modicon Quantum 140 & M340: Schneider Electric Legacy PLC Parts | IndustrialPLCHub</title>
     <meta name="description" content="Technical guide to Modicon Quantum (140 series) and M340 — CPS power supplies, CRA remote I/O, processors, and migration tips for aging installations.">
-    <meta name="keywords" content="modicon quantum, modicon 140, schneider modicon, modicon m340">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="qE4-TWqedGgbRFMc5S4NsXt-HXlgObut4GYvlOUxPWo">
     <link rel="canonical" href="https://www.industrialplchub.com/blog/modicon-quantum-m340-parts-reference.html">
@@ -17,16 +16,21 @@
     <meta property="og:description" content="Technical guide to Modicon Quantum (140 series) and M340 — CPS power supplies, CRA remote I/O, processors, and migration tips for aging installations.">
     <meta property="og:url"         content="https://www.industrialplchub.com/blog/modicon-quantum-m340-parts-reference.html">
     <meta property="og:site_name"   content="IndustrialPLCHub">
+    <meta property="og:image"        content="https://www.industrialplchub.com/og-default.png">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"    content="Modicon Quantum 140 & M340: Schneider Electric Legacy PLC Parts — IndustrialPLCHub">
 
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R84J2YNCVW"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R84J2YNCVW');</script>
 
     <!-- Schema.org -->
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Modicon Quantum 140 & M340: Schneider Electric Legacy PLC Parts", "description": "Technical guide to Modicon Quantum (140 series) and M340 \u2014 CPS power supplies, CRA remote I/O, processors, and migration tips for aging installations.", "datePublished": "2026-05-06", "dateModified": "2026-05-06", "author": {"@type": "Organization", "name": "IndustrialPLCHub"}, "publisher": {"@type": "Organization", "name": "IndustrialPLCHub", "url": "https://www.industrialplchub.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.industrialplchub.com/blog/modicon-quantum-m340-parts-reference.html"}, "keywords": "modicon quantum, modicon 140, schneider modicon, modicon m340"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Modicon Quantum 140 & M340: Schneider Electric Legacy PLC Parts", "description": "Technical guide to Modicon Quantum (140 series) and M340 \u2014 CPS power supplies, CRA remote I/O, processors, and migration tips for aging installations.", "datePublished": "2026-05-06", "dateModified": "2026-05-06", "author": {"@type": "Person", "name": "IndustrialPLCHub Engineering Team", "url": "https://www.industrialplchub.com/about.html"}, "publisher": {"@type": "Organization", "name": "IndustrialPLCHub", "url": "https://www.industrialplchub.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.industrialplchub.com/blog/modicon-quantum-m340-parts-reference.html"}, "keywords": "modicon quantum, modicon 140, schneider modicon, modicon m340"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.industrialplchub.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.industrialplchub.com/blog/index.html"}, {"@type": "ListItem", "position": 3, "name": "Modicon Quantum 140 & M340: Schneider Electric Legacy PLC Parts"}]}</script>
 
     
+
 <style>
     /* ── Reset & Base ── */
     * { box-sizing: border-box; }
@@ -151,7 +155,21 @@
     /* ── Responsive ── */
     @media (max-width: 900px) {
         .blog-wrapper { grid-template-columns: 1fr; }
-        .blog-sidebar { display: none; }
+        /* FIX: sidebar was display:none — engineers on mobile lost the CTA and brand links.
+           Now renders as a 2-column strip below the article.
+           sidebar-mobile-hide hides lower-priority widgets (More Guides, Disclosure). */
+        .blog-sidebar {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            border-top: 2px solid #e2e8f0;
+            padding-top: 24px;
+            margin-top: 8px;
+        }
+        /* CTA is the main conversion element — always full width */
+        .blog-sidebar .sidebar-cta { grid-column: 1 / -1; }
+        /* Hide secondary widgets to keep mobile clean */
+        .sidebar-mobile-hide { display: none !important; }
         .blog-article { padding: 22px; }
         .blog-article h1 { font-size: 1.7em; }
         .navbar .container { flex-direction: column; gap: 12px; }
@@ -165,10 +183,14 @@
         .related-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 500px) {
+        .blog-sidebar { grid-template-columns: 1fr; }
         .related-grid { grid-template-columns: 1fr; }
     }
 </style>
 
+
+
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What are the main differences between Modicon Quantum 140 and M340?", "acceptedAnswer": {"@type": "Answer", "text": "The Quantum 140 offers higher I/O capacity and faster scan times, while the M340 is more compact and integrates seamlessly with Schneider's EcoStruxure platform."}}, {"@type": "Question", "name": "Can Modicon Quantum 140 systems be integrated with modern networks?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, Modicon Quantum 140 supports protocols like EtherNet/IP and Modbus TCP, allowing integration with modern network architectures."}}, {"@type": "Question", "name": "Is it necessary to replace all Quantum 140 components during migration?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Evaluate which components are critical and compatible with new systems to avoid unnecessary replacements."}}, {"@type": "Question", "name": "What are the risks of not upgrading legacy PLC systems?", "acceptedAnswer": {"@type": "Answer", "text": "Risks include increased downtime, difficulty in finding spare parts, and lack of support for newer technologies and protocols."}}]}</script>
 </head>
 <body>
 

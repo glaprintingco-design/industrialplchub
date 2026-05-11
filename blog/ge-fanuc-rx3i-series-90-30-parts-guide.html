@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules | IndustrialPLCHub</title>
     <meta name="description" content="Reference for GE Fanuc RX3i (IC695) and Series 90-30 (IC693) — CPUs, power supplies, I/O modules, communication cards and end-of-life sourcing.">
-    <meta name="keywords" content="ge fanuc rx3i, series 90-30, ic695, ic693">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="qE4-TWqedGgbRFMc5S4NsXt-HXlgObut4GYvlOUxPWo">
     <link rel="canonical" href="https://www.industrialplchub.com/blog/ge-fanuc-rx3i-series-90-30-parts-guide.html">
@@ -17,16 +16,21 @@
     <meta property="og:description" content="Reference for GE Fanuc RX3i (IC695) and Series 90-30 (IC693) — CPUs, power supplies, I/O modules, communication cards and end-of-life sourcing.">
     <meta property="og:url"         content="https://www.industrialplchub.com/blog/ge-fanuc-rx3i-series-90-30-parts-guide.html">
     <meta property="og:site_name"   content="IndustrialPLCHub">
+    <meta property="og:image"        content="https://www.industrialplchub.com/og-default.png">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"    content="GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules — IndustrialPLCHub">
 
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R84J2YNCVW"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R84J2YNCVW');</script>
 
     <!-- Schema.org -->
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules", "description": "Reference for GE Fanuc RX3i (IC695) and Series 90-30 (IC693) \u2014 CPUs, power supplies, I/O modules, communication cards and end-of-life sourcing.", "datePublished": "2026-05-06", "dateModified": "2026-05-06", "author": {"@type": "Organization", "name": "IndustrialPLCHub"}, "publisher": {"@type": "Organization", "name": "IndustrialPLCHub", "url": "https://www.industrialplchub.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.industrialplchub.com/blog/ge-fanuc-rx3i-series-90-30-parts-guide.html"}, "keywords": "ge fanuc rx3i, series 90-30, ic695, ic693"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules", "description": "Reference for GE Fanuc RX3i (IC695) and Series 90-30 (IC693) \u2014 CPUs, power supplies, I/O modules, communication cards and end-of-life sourcing.", "datePublished": "2026-05-06", "dateModified": "2026-05-06", "author": {"@type": "Person", "name": "IndustrialPLCHub Engineering Team", "url": "https://www.industrialplchub.com/about.html"}, "publisher": {"@type": "Organization", "name": "IndustrialPLCHub", "url": "https://www.industrialplchub.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.industrialplchub.com/blog/ge-fanuc-rx3i-series-90-30-parts-guide.html"}, "keywords": "ge fanuc rx3i, series 90-30, ic695, ic693"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.industrialplchub.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.industrialplchub.com/blog/index.html"}, {"@type": "ListItem", "position": 3, "name": "GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules"}]}</script>
 
     
+
 <style>
     /* ── Reset & Base ── */
     * { box-sizing: border-box; }
@@ -151,7 +155,21 @@
     /* ── Responsive ── */
     @media (max-width: 900px) {
         .blog-wrapper { grid-template-columns: 1fr; }
-        .blog-sidebar { display: none; }
+        /* FIX: sidebar was display:none — engineers on mobile lost the CTA and brand links.
+           Now renders as a 2-column strip below the article.
+           sidebar-mobile-hide hides lower-priority widgets (More Guides, Disclosure). */
+        .blog-sidebar {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            border-top: 2px solid #e2e8f0;
+            padding-top: 24px;
+            margin-top: 8px;
+        }
+        /* CTA is the main conversion element — always full width */
+        .blog-sidebar .sidebar-cta { grid-column: 1 / -1; }
+        /* Hide secondary widgets to keep mobile clean */
+        .sidebar-mobile-hide { display: none !important; }
         .blog-article { padding: 22px; }
         .blog-article h1 { font-size: 1.7em; }
         .navbar .container { flex-direction: column; gap: 12px; }
@@ -165,10 +183,14 @@
         .related-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 500px) {
+        .blog-sidebar { grid-template-columns: 1fr; }
         .related-grid { grid-template-columns: 1fr; }
     }
 </style>
 
+
+
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What are the benefits of upgrading to the RX3i?", "acceptedAnswer": {"@type": "Answer", "text": "The RX3i offers increased CPU memory, faster scan times, expanded I/O capacity, and enhanced communication options, making it ideal for complex control applications."}}, {"@type": "Question", "name": "Can existing Series 90-30 modules be used with the RX3i?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, many Series 90-30 modules are compatible with the RX3i, allowing for a smoother transition with minimal hardware changes."}}, {"@type": "Question", "name": "What software is recommended for programming the RX3i?", "acceptedAnswer": {"@type": "Answer", "text": "Proficy Machine Edition is recommended for programming the RX3i, offering a comprehensive suite for control and monitoring."}}, {"@type": "Question", "name": "How can I mitigate downtime during the migration?", "acceptedAnswer": {"@type": "Answer", "text": "Implement a phased migration strategy and conduct extensive testing to ensure seamless integration and minimize operational disruptions."}}]}</script>
 </head>
 <body>
 
