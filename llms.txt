@@ -1,0 +1,36 @@
+# IndustrialPLCHub
+
+> IndustrialPLCHub is a technical reference catalog and sourcing resource for legacy industrial automation parts: PLCs, I/O modules, power supplies, HMIs, and drives. Coverage spans Allen-Bradley (Rockwell Automation), Siemens, Modicon (Schneider Electric), GE Fanuc, Omron, Mitsubishi, Yaskawa, ABB, Beckhoff, Honeywell, and Keyence. Every product page includes the verified part number, live eBay market pricing, technical specifications, compatibility notes, and installation guidance — written for maintenance engineers and procurement teams sourcing replacement parts for aging industrial control systems.
+
+> Last updated: 2026-06-11
+
+## Brand catalogs
+
+- [Full catalog](https://www.industrialplchub.com/index.html): All brands, silo navigation, on-page search
+- [Allen-Bradley](https://www.industrialplchub.com/allen-bradley.html): 100 parts
+- [GE Fanuc](https://www.industrialplchub.com/ge-fanuc.html): 76 parts
+- [Modicon](https://www.industrialplchub.com/modicon.html): 74 parts
+- [Omron](https://www.industrialplchub.com/omron.html): 87 parts
+- [Schneider](https://www.industrialplchub.com/schneider.html): 2 parts
+- [Siemens](https://www.industrialplchub.com/siemens.html): 86 parts
+
+## Blog & guides
+
+- [Blog index](https://www.industrialplchub.com/blog/index.html): Technical guides, part comparisons, sourcing strategy
+  Covers ControlLogix 1756, CompactLogix 1769, SLC-500, Siemens S7-300/400, Modicon M340/Quantum, and more.
+
+## About
+
+- [About the site](https://www.industrialplchub.com/about.html): Mission, editorial approach, affiliate disclosure
+- [Author — David Cole](https://www.industrialplchub.com/author-david-cole.html): Controls and automation engineer, 22 years of field experience in PLC systems, legacy migration, and industrial spare parts strategy
+
+## Data & feeds
+
+- Sitemap: https://www.industrialplchub.com/sitemap.xml
+- Blog sitemap: https://www.industrialplchub.com/blog/sitemap_blog.xml
+- Product feed (Google Base / Pinterest Catalog): https://www.industrialplchub.com/product-feed.xml
+
+## Crawling policy
+
+This site explicitly welcomes all AI crawlers, language model indexers, and search agents.
+See /robots.txt for the full allow list.
