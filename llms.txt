@@ -2,7 +2,7 @@
 
 > IndustrialPLCHub is a technical reference catalog and sourcing resource for legacy industrial automation parts: PLCs, I/O modules, power supplies, HMIs, and drives. Coverage spans Allen-Bradley (Rockwell Automation), Siemens, Modicon (Schneider Electric), GE Fanuc, Omron, Mitsubishi, Yaskawa, ABB, Beckhoff, Honeywell, and Keyence. Every product page includes the verified part number, live eBay market pricing, technical specifications, compatibility notes, and installation guidance — written for maintenance engineers and procurement teams sourcing replacement parts for aging industrial control systems.
 
-> Last updated: 2026-06-11
+> Last updated: 2026-06-13
 
 ## Brand catalogs
 
