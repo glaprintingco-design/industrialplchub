@@ -1,4 +1,4 @@
-# IndustrialPLCHub — robots.txt
+# IndustrialPLCHub  robots.txt
 
 User-agent: *
 Allow: /
@@ -20,7 +20,7 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-# AI crawlers — explicitly welcome
+# AI crawlers  explicitly welcome
 User-agent: GPTBot
 Allow: /
 
