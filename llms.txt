@@ -2,17 +2,17 @@
 
 > IndustrialPLCHub is a technical reference catalog and sourcing resource for legacy industrial automation parts: PLCs, I/O modules, power supplies, HMIs, and drives. Coverage spans Allen-Bradley (Rockwell Automation), Siemens, Modicon (Schneider Electric), GE Fanuc, Omron, Mitsubishi, Yaskawa, ABB, Beckhoff, Honeywell, and Keyence. Every product page includes the verified part number, live eBay market pricing, technical specifications, compatibility notes, and installation guidance  written for maintenance engineers and procurement teams sourcing replacement parts for aging industrial control systems.
 
-> Last updated: 2026-06-22
+> Last updated: 2026-07-06
 
 ## Brand catalogs
 
 - [Full catalog](https://www.industrialplchub.com/index.html): All brands, silo navigation, on-page search
-- [Allen-Bradley](https://www.industrialplchub.com/allen-bradley.html): 117 parts
-- [GE Fanuc](https://www.industrialplchub.com/ge-fanuc.html): 90 parts
-- [Modicon](https://www.industrialplchub.com/modicon.html): 37 parts
-- [Omron](https://www.industrialplchub.com/omron.html): 100 parts
-- [Schneider](https://www.industrialplchub.com/schneider.html): 50 parts
-- [Siemens](https://www.industrialplchub.com/siemens.html): 101 parts
+- [Allen-Bradley](https://www.industrialplchub.com/allen-bradley.html): 145 parts
+- [GE Fanuc](https://www.industrialplchub.com/ge-fanuc.html): 105 parts
+- [Modicon](https://www.industrialplchub.com/modicon.html): 49 parts
+- [Omron](https://www.industrialplchub.com/omron.html): 123 parts
+- [Schneider](https://www.industrialplchub.com/schneider.html): 55 parts
+- [Siemens](https://www.industrialplchub.com/siemens.html): 120 parts
 
 ## Blog & guides
 
