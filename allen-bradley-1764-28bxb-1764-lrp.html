@@ -10,6 +10,9 @@
     * { box-sizing: border-box; }
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
     a { text-decoration: none; color: inherit; transition: 0.3s; }
+    .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; padding: 10px 15px; background: #fff; box-shadow: 0 -3px 15px rgba(0,0,0,0.18); z-index: 9999; }
+    .sticky-cta .btn-ebay { margin: 0; padding: 14px; font-size: 1.05em; border-radius: 6px; }
+    @media (max-width: 768px) { .sticky-cta { display: block; } body { padding-bottom: 72px; } }
     .navbar { background-color: #111; color: #fff; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
     .navbar .container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
     .brand { display: flex; align-items: center; font-size: 1.8em; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: -0.5px; white-space: nowrap; }
@@ -148,7 +151,7 @@
         "url": "https://www.industrialplchub.com/allen-bradley-1764-28bxb-1764-lrp.html",
         "priceCurrency": "USD",
         "price": "160.00",
-        "priceValidUntil": "2027-08-03",
+        "priceValidUntil": "2027-09-30",
         "itemCondition": "https://schema.org/UsedCondition",
         "availability": "https://schema.org/InStock"
       }
@@ -300,6 +303,10 @@
         </div>
     </div>
 </footer>
-<!-- AFF-IP-V1 -->
+
+<!-- STICKY-V1 -->
+<div class="sticky-cta">
+  <a href="https://www.ebay.com/sch/i.html?_nkw=Allen%20Bradley%201764-28BXB%20B%201764-LRP%20C%20processor%20MicroLogix%201500&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339150622&toolid=10001&mkevt=1&customid=allen-bradley-1764-28bxb-1764-lrp" class="btn-ebay" target="_blank" rel="nofollow sponsored">Check Availability &amp; Price</a>
+</div>
 </body>
 </html>
