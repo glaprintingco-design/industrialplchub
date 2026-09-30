@@ -26,7 +26,10 @@
     .navbar .container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
     .brand { display: flex; align-items: center; font-size: 1.8em; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: -0.5px; white-space: nowrap; }
     .brand .brand-plc { color: #4dabff; }
-    .nav-logo { height: 105px; width: auto; margin-right: 15px; flex-shrink: 0; }
+    /* 56px y no 105: el PNG se recorto al contenido (la marca ocupaba el 45%
+       del alto del archivo y ahora ocupa el 88%), asi que a 56px se ve igual
+       de grande que antes a 105px, sin el relleno gris alrededor. */
+    .nav-logo { height: 56px; width: auto; margin-right: 12px; flex-shrink: 0; }
     .nav-links a { color: #ffffff; margin-left: 20px; font-size: 0.9em; font-weight: 600; text-transform: uppercase; }
     .nav-links a:hover { color: #fff; }
     footer { background-color: #1a1a1a; color: #bbb; padding: 50px 0; margin-top: 60px; font-size: 0.9em; border-top: 4px solid #0056b3; text-align: center; }
@@ -91,20 +94,16 @@
 
     /* --- RESPONSIVE DESIGN --- */
     @media (max-width: 768px) {
-        .navbar .container { flex-direction: column; gap: 10px; }
-        .nav-logo { height: 128px; margin-right: 10px; }
-        .brand { 
-            font-size: 1.6em; 
-            white-space: normal; 
-            text-align: center;
-            flex-direction: column;
-            gap: 0;
-            line-height: 1.1;
-        }
-        .brand-line1 { display: block; letter-spacing: 1px; }
-        .brand-line2 { display: block; }
-        .nav-links { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        .nav-links a { margin: 0; }
+        /* Header compacto: logo y marca en una linea, enlaces al lado. Si no
+           caben a lo ancho, flex-wrap baja los enlaces a un segundo renglon en
+           vez de desbordar la pagina. ~50px en una fila, ~72px en dos, contra
+           los ~300px que ocupaba apilado en columna. */
+        .navbar { padding: 8px 0; }
+        .navbar .container { flex-wrap: wrap; gap: 4px 12px; padding: 0 14px; }
+        .nav-logo { height: 36px; margin-right: 8px; }
+        .brand { font-size: 0.95em; }
+        .nav-links { display: flex; gap: 14px; }
+        .nav-links a { margin: 0; font-size: 0.62em; padding: 3px 0; }
         .search-container { width: 90%; }
         .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
         .card-title { font-size: 0.85em; }
