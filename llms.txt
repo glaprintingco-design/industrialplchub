@@ -9,6 +9,8 @@
 - [Full catalog](https://www.industrialplchub.com/index.html): All brands, silo navigation, on-page search
 - [ABB](https://www.industrialplchub.com/abb.html): 5 parts
 - [Allen-Bradley](https://www.industrialplchub.com/allen-bradley.html): 145 parts
+- [Beckhoff](https://www.industrialplchub.com/beckhoff.html): 1 parts
+- [Emerson](https://www.industrialplchub.com/emerson.html): 1 parts
 - [GE Fanuc](https://www.industrialplchub.com/ge-fanuc.html): 108 parts
 - [Mitsubishi](https://www.industrialplchub.com/mitsubishi.html): 2 parts
 - [Modicon](https://www.industrialplchub.com/modicon.html): 51 parts
