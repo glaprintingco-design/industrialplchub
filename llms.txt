@@ -7,17 +7,17 @@
 ## Brand catalogs
 
 - [Full catalog](https://www.industrialplchub.com/index.html): All brands, silo navigation, on-page search
-- [ABB](https://www.industrialplchub.com/abb.html): 5 parts
-- [Allen-Bradley](https://www.industrialplchub.com/allen-bradley.html): 145 parts
-- [Beckhoff](https://www.industrialplchub.com/beckhoff.html): 1 parts
+- [ABB](https://www.industrialplchub.com/abb.html): 9 parts
+- [Allen-Bradley](https://www.industrialplchub.com/allen-bradley.html): 147 parts
+- [Beckhoff](https://www.industrialplchub.com/beckhoff.html): 6 parts
 - [Emerson](https://www.industrialplchub.com/emerson.html): 1 parts
 - [GE Fanuc](https://www.industrialplchub.com/ge-fanuc.html): 108 parts
-- [Mitsubishi](https://www.industrialplchub.com/mitsubishi.html): 2 parts
+- [Mitsubishi](https://www.industrialplchub.com/mitsubishi.html): 9 parts
 - [Modicon](https://www.industrialplchub.com/modicon.html): 51 parts
-- [Omron](https://www.industrialplchub.com/omron.html): 127 parts
-- [Schneider](https://www.industrialplchub.com/schneider.html): 59 parts
-- [Siemens](https://www.industrialplchub.com/siemens.html): 121 parts
-- [Yaskawa](https://www.industrialplchub.com/yaskawa.html): 3 parts
+- [Omron](https://www.industrialplchub.com/omron.html): 128 parts
+- [Schneider](https://www.industrialplchub.com/schneider.html): 60 parts
+- [Siemens](https://www.industrialplchub.com/siemens.html): 124 parts
+- [Yaskawa](https://www.industrialplchub.com/yaskawa.html): 5 parts
 
 ## Blog & guides
 

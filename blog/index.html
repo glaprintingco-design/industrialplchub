@@ -41,6 +41,15 @@
     .blog-article { background: #fff; border-radius: 8px; padding: 40px;
                     box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 
+    /* fix-desborde-movil */
+    /* `1fr` es minmax(auto,1fr): sin esto, una tabla ancha no deja encoger la
+       columna y arrastra el layout viewport (medido: 524px en un movil de 390). */
+    .blog-wrapper > * { min-width: 0; }
+    .blog-article img { max-width: 100%; height: auto; }
+    .blog-article pre, .blog-article code { max-width: 100%; overflow-x: auto; }
+    .blog-article table, .spec-table { display: block; max-width: 100%;
+                                        min-width: 0; overflow-x: auto; }
+
     /*  Tipografa artculo  */
     .blog-article h1 { font-size: 2.2em; color: #1a202c; margin-top: 0;
                        line-height: 1.2; font-weight: 800; letter-spacing: -0.5px; }
@@ -223,16 +232,7 @@
         .blog-article h1 { font-size: 1.3em; }
         .nav-logo { height: 44px; }
     }
-
-    /* fix-desborde-movil */
-    /* `1fr` es minmax(auto,1fr): sin esto, una tabla ancha no deja encoger la
-       columna y arrastra el layout viewport (medido: 524px en un movil de 390). */
-    .blog-wrapper > * { min-width: 0; }
-    .blog-article img { max-width: 100%; height: auto; }
-    .blog-article pre, .blog-article code { max-width: 100%; overflow-x: auto; }
-    .blog-article table, .spec-table { display: block; max-width: 100%;
-                                        min-width: 0; overflow-x: auto; }
-  </style>
+</style>
 
 </head>
 <body>
@@ -265,13 +265,13 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Industrial
+                October 01, 2026 &bull; Industrial
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
-                <a href="whats-a-better-way-to-word-when-replacing-the-mpcp-plc-battery-how-is-the-battery-supposed-to-be-installed.html" style="color:#1a202c;">Whats A Better Way To Word When Replacing The Mpcp Plc Battery, How Is The Battery Supposed To Be Installed?: Complete Guide</a>
+                <a href="how-to-replaced-allen-bradley-plc-controller-battery-1756-ba2.html" style="color:#1a202c;">How To Replaced Allen Bradley Plc Controller Battery 1756-ba2: Complete Guide</a>
             </h2>
-            <p style="color:#4a5568; font-size:0.93em; margin:0 0 12px;">Whats A Better Way To Word When Replacing The Mpcp Plc Battery, How Is The Battery Supposed To Be Installed?. Industrial how_to for industrial automation. Learn</p>
-            <a href="whats-a-better-way-to-word-when-replacing-the-mpcp-plc-battery-how-is-the-battery-supposed-to-be-installed.html"
+            <p style="color:#4a5568; font-size:0.93em; margin:0 0 12px;">How To Replaced Allen Bradley Plc Controller Battery 1756-ba2. Industrial how_to for industrial automation. Learn best practices, specs, and sourcing.</p>
+            <a href="how-to-replaced-allen-bradley-plc-controller-battery-1756-ba2.html"
                style="font-size:0.85em; font-weight:700; color:#0056b3;">
                Read Technical Guide 
             </a>
@@ -281,7 +281,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-controllogix-1756-parts-guide.html" style="color:#1a202c;">Allen-Bradley ControlLogix 1756: Complete Parts & Modules Guide</a>
@@ -297,7 +297,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-compactlogix-1769-modules-guide.html" style="color:#1a202c;">Allen-Bradley CompactLogix 1769: Processors & I/O Modules Reference</a>
@@ -313,7 +313,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-simatic-s7-300-400-parts-guide.html" style="color:#1a202c;">Siemens SIMATIC S7-300 & S7-400: Legacy PLC Replacement Parts</a>
@@ -329,7 +329,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-s7-1200-vs-s7-1500-comparison.html" style="color:#1a202c;">Siemens S7-1200 vs S7-1500: Which TIA Portal PLC Fits Your Application?</a>
@@ -345,7 +345,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Modicon
+                October 01, 2026 &bull; Modicon
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="modicon-quantum-m340-parts-reference.html" style="color:#1a202c;">Modicon Quantum 140 & M340: Schneider Electric Legacy PLC Parts</a>
@@ -361,7 +361,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; GE Fanuc
+                October 01, 2026 &bull; GE Fanuc
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="ge-fanuc-rx3i-series-90-30-parts-guide.html" style="color:#1a202c;">GE Fanuc RX3i & Series 90-30: PAC and PLC Replacement Modules</a>
@@ -377,7 +377,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-1747-l531-slc-500-deep-dive.html" style="color:#1a202c;">Allen-Bradley 1747-L531 SLC 500: Processor Specs & Sourcing Guide</a>
@@ -393,7 +393,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Omron
+                October 01, 2026 &bull; Omron
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="omron-cj2m-sysmac-nj-parts-guide.html" style="color:#1a202c;">Omron CJ2M & Sysmac NJ: PLC Parts and Module Reference</a>
@@ -409,7 +409,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-micrologix-1100-1400-guide.html" style="color:#1a202c;">Allen-Bradley MicroLogix 1100 & 1400: Parts, Modules & End-of-Life Strategy</a>
@@ -425,7 +425,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-plc5-legacy-replacement-guide.html" style="color:#1a202c;">Allen-Bradley PLC-5: End-of-Life Parts & Migration to ControlLogix</a>
@@ -441,7 +441,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-powerflex-drives-parts-guide.html" style="color:#1a202c;">Allen-Bradley PowerFlex 40 & 755 Drives: Parts, Fault Codes & Replacement</a>
@@ -457,7 +457,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-et200-distributed-io-guide.html" style="color:#1a202c;">Siemens ET200S & ET200SP: Distributed I/O Modules Reference</a>
@@ -473,7 +473,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-sinamics-s120-g120-drives-guide.html" style="color:#1a202c;">Siemens SINAMICS S120 & G120: Drive Parts, Control Units & Line Modules</a>
@@ -489,7 +489,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-cp343-cp443-communication-modules-guide.html" style="color:#1a202c;">Siemens CP343 & CP443 Communication Processors: Specs & Compatibility</a>
@@ -505,7 +505,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Modicon
+                October 01, 2026 &bull; Modicon
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="schneider-modicon-m580-premium-parts-guide.html" style="color:#1a202c;">Schneider Electric Modicon M580 & Premium: PAC Modules & Replacement Parts</a>
@@ -521,7 +521,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Modicon
+                October 01, 2026 &bull; Modicon
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="modicon-quantum-140-cpu-power-supply-guide.html" style="color:#1a202c;">Modicon Quantum 140 CPU & Power Supply: Deep Dive Reference</a>
@@ -537,7 +537,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; GE Fanuc
+                October 01, 2026 &bull; GE Fanuc
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="ge-fanuc-ic693-series-90-30-cpu-guide.html" style="color:#1a202c;">GE Fanuc IC693 Series 90-30: CPU, I/O & Power Supply Reference</a>
@@ -553,7 +553,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Mitsubishi
+                October 01, 2026 &bull; Mitsubishi
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="mitsubishi-melsec-q-fx-plc-parts-guide.html" style="color:#1a202c;">Mitsubishi MELSEC Q & FX Series: PLC Modules & Replacement Parts</a>
@@ -569,7 +569,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Yaskawa
+                October 01, 2026 &bull; Yaskawa
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="yaskawa-motoman-servo-drive-parts-guide.html" style="color:#1a202c;">Yaskawa Sigma-5 & Sigma-7 Servo Drives: Parts, Alarms & Replacement</a>
@@ -585,7 +585,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; ABB
+                October 01, 2026 &bull; ABB
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="abb-ac500-plc-parts-guide.html" style="color:#1a202c;">ABB AC500 PLC: Modules, Communication Cards & Replacement Parts</a>
@@ -601,7 +601,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="plc-migration-slc500-to-compactlogix-guide.html" style="color:#1a202c;">SLC 500 to CompactLogix Migration: Step-by-Step Engineer's Guide</a>
@@ -617,7 +617,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="profibus-dp-troubleshooting-guide.html" style="color:#1a202c;">PROFIBUS DP Troubleshooting: Diagnostics, Common Faults & Tools</a>
@@ -633,7 +633,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="ethernet-ip-vs-profinet-comparison.html" style="color:#1a202c;">EtherNet/IP vs PROFINET: Which Industrial Network Fits Your Plant?</a>
@@ -649,7 +649,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="plc-spare-parts-strategy-guide.html" style="color:#1a202c;">PLC Spare Parts Strategy: How to Build a Bulletproof Inventory</a>
@@ -665,7 +665,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-s7-300-to-s7-1500-migration-guide.html" style="color:#1a202c;">Siemens S7-300 to S7-1500 Migration: TIA Portal Upgrade Roadmap</a>
@@ -681,7 +681,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Omron
+                October 01, 2026 &bull; Omron
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="omron-nx-nj-series-parts-guide.html" style="color:#1a202c;">Omron NX & NJ Series: Sysmac Platform Modules & Replacement Parts</a>
@@ -697,7 +697,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-guardlogix-safety-plc-guide.html" style="color:#1a202c;">Allen-Bradley GuardLogix 5570 & 5580: Safety PLC Modules & SIL Guide</a>
@@ -713,7 +713,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-panelview-plus-hmi-parts-guide.html" style="color:#1a202c;">Allen-Bradley PanelView Plus 6 & 7: HMI Parts, Display Replacement & Troubleshooting</a>
@@ -729,7 +729,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-powerflex-525-drive-guide.html" style="color:#1a202c;">Allen-Bradley PowerFlex 525: AC Drive Parts, Parameters & Fault Codes</a>
@@ -745,7 +745,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Beckhoff
+                October 01, 2026 &bull; Beckhoff
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="beckhoff-cx-bk-series-plc-guide.html" style="color:#1a202c;">Beckhoff CX & BK Series: Embedded PCs, Bus Terminals & Replacement Parts</a>
@@ -761,7 +761,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-s5-legacy-plc-end-of-life-guide.html" style="color:#1a202c;">Siemens SIMATIC S5: End-of-Life Parts Sourcing & Migration Strategy</a>
@@ -777,7 +777,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Siemens
+                October 01, 2026 &bull; Siemens
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="siemens-sitop-power-supply-guide.html" style="color:#1a202c;">Siemens SITOP Power Supplies: Selection Guide & Replacement Reference</a>
@@ -793,7 +793,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Modicon
+                October 01, 2026 &bull; Modicon
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="schneider-altivar-drive-parts-guide.html" style="color:#1a202c;">Schneider Electric Altivar 312 & 71: VFD Parts, Fault Codes & Replacement</a>
@@ -809,7 +809,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="devicenet-troubleshooting-guide.html" style="color:#1a202c;">DeviceNet Troubleshooting: Diagnostics, Node Commissioning & Common Faults</a>
@@ -825,7 +825,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; GE Fanuc
+                October 01, 2026 &bull; GE Fanuc
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="fanuc-cnc-series-30i-31i-parts-guide.html" style="color:#1a202c;">FANUC CNC Series 30i & 31i: Control Modules, Servo Drives & Replacement Parts</a>
@@ -841,7 +841,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="plc-battery-replacement-guide.html" style="color:#1a202c;">PLC Battery Replacement Guide: Allen-Bradley, Siemens, GE & More</a>
@@ -857,7 +857,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Omron
+                October 01, 2026 &bull; Omron
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="omron-cj1-cj1m-cj1w-parts-guide.html" style="color:#1a202c;">Omron CJ1, CJ1M & CJ1W: PLC Modules, I/O Cards & Replacement Parts</a>
@@ -873,7 +873,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-slc-500-chassis-power-supply-guide.html" style="color:#1a202c;">Allen-Bradley SLC 500 Chassis & Power Supplies: 1746-A & 1746-P Reference</a>
@@ -889,7 +889,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-slc-500-processor-comparison.html" style="color:#1a202c;">Allen-Bradley SLC 500 Processors: 5/01 to 5/05 Comparison (1747-L5xx)</a>
@@ -905,7 +905,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-micrologix-1500-1764-guide.html" style="color:#1a202c;">Allen-Bradley MicroLogix 1500 (1764): Base Units, Processors & I/O Reference</a>
@@ -921,7 +921,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-1606-power-supply-guide.html" style="color:#1a202c;">Allen-Bradley 1606 Power Supplies: XLE & XLS Switched-Mode Selection Guide</a>
@@ -937,7 +937,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Modicon
+                October 01, 2026 &bull; Modicon
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="schneider-modicon-premium-tsx-p57-guide.html" style="color:#1a202c;">Schneider Modicon Premium TSX P57: CPUs, TSXPSY Power Supplies & I/O Reference</a>
@@ -953,7 +953,7 @@
              onmouseover="this.style.borderColor='#0056b3'"
              onmouseout="this.style.borderColor='#e2e8f0'">
             <div style="font-size:0.8em; color:#718096; margin-bottom:8px;">
-                August 03, 2026 &bull; Allen-Bradley
+                October 01, 2026 &bull; Allen-Bradley
             </div>
             <h2 style="font-size:1.2em; margin:0 0 10px;">
                 <a href="allen-bradley-point-io-1734-guide.html" style="color:#1a202c;">Allen-Bradley POINT I/O 1734: Network Adapters, I/O Modules & Replacement Parts</a>
