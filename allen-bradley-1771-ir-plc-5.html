@@ -33,13 +33,15 @@
 
 
 
+
+
 <style>
     * { box-sizing: border-box; }
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
     a { text-decoration: none; color: inherit; transition: 0.3s; }
     .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; padding: 10px 15px; background: #fff; box-shadow: 0 -3px 15px rgba(0,0,0,0.18); z-index: 9999; }
     .sticky-cta .btn-ebay { margin: 0; padding: 14px; font-size: 1.05em; border-radius: 6px; }
-    @media (max-width: 768px) { .sticky-cta { display: block; } body { padding-bottom: 72px; } }
+    @media (max-width: 768px) { .sticky-cta { display: block; } body { padding-bottom: 110px; }  /* el CTA flotante mide hasta 102px cuando el texto parte en dos lineas */ }
     .navbar { background-color: #111; color: #fff; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
     .navbar .container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
     .brand { display: flex; align-items: center; font-size: 1.8em; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: -0.5px; white-space: nowrap; }
@@ -50,6 +52,13 @@
     .nav-logo { height: 56px; width: auto; margin-right: 12px; flex-shrink: 0; }
     .nav-links a { color: #ffffff; margin-left: 20px; font-size: 0.9em; font-weight: 600; text-transform: uppercase; }
     .nav-links a:hover { color: #fff; }
+    /* --- Boton hamburguesa: oculto en escritorio, el menu va inline --- */
+    .nav-toggle { display: none; background: none; border: 0; padding: 10px 4px; cursor: pointer; line-height: 0; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform .2s, opacity .2s; }
+    .nav-toggle span + span { margin-top: 5px; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     footer { background-color: #1a1a1a; color: #bbb; padding: 50px 0; margin-top: 60px; font-size: 0.9em; border-top: 4px solid #0056b3; text-align: center; }
     footer .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
     footer h2 { color: #ddd; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.1em; }
@@ -120,8 +129,11 @@
         .navbar .container { flex-wrap: wrap; gap: 4px 12px; padding: 0 14px; }
         .nav-logo { height: 36px; margin-right: 8px; }
         .brand { font-size: 0.95em; }
-        .nav-links { display: flex; gap: 14px; }
-        .nav-links a { margin: 0; font-size: 0.62em; padding: 3px 0; }
+        /* Los enlaces pasan a desplegable: el header queda en una sola fila. */
+        .nav-toggle { display: block; }
+        .nav-links { display: none; width: 100%; flex-direction: column; gap: 0; margin: 0; }
+        .nav-links.abierto { display: flex; }
+        .nav-links a { margin: 0; padding: 12px 2px; font-size: 0.8em; border-top: 1px solid #2a2a2a; }
         .search-container { width: 90%; }
         .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
         .card-title { font-size: 0.85em; }
@@ -130,7 +142,17 @@
         .product-layout { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
         .price-tag { font-size: 2.5em; }
     }
+    /* Telefonos estrechos: a 320px la marca mas el boton no caben y el boton
+       saltaba a una segunda fila, dejando el header en 92px. */
+    @media (max-width: 360px) {
+        .navbar .container { padding: 0 10px; gap: 4px 8px; }
+        .nav-logo { height: 32px; margin-right: 6px; }
+        .brand { font-size: 0.88em; }
+    }
+
 </style>
+
+
 
 
 
@@ -157,6 +179,16 @@
 
 <link rel="icon" type="image/png" href="https://www.industrialplchub.com/favicon.png">
 <link rel="canonical" href="https://www.industrialplchub.com/allen-bradley-1771-ir-plc-5.html" />
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -353,19 +385,38 @@
 
 
 
+
+
 <nav class="navbar">
     <div class="container">
         <a href="index.html" class="brand">
             <img src="logo.png" alt="IndustrialPLCHub Logo" class="nav-logo">
             <span class="brand-line1">Industrial</span><span class="brand-line2"><span class="brand-plc">PLC</span>Hub</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
             <a href="index.html">Catalog</a>
             <a href="blog/index.html">Blog</a>
             <a href="about.html">About Us</a>
         </div>
     </div>
+
+<script>
+(function () {
+  var b = document.querySelector('.nav-toggle');
+  if (!b) return;
+  b.addEventListener('click', function () {
+    var l = document.getElementById('nav-links');
+    if (!l) return;
+    b.setAttribute('aria-expanded', l.classList.toggle('abierto') ? 'true' : 'false');
+  });
+})();
+</script>
 </nav>
+
+
 
 
 
@@ -474,6 +525,8 @@
 
 
 
+
+
 <footer>
     <div class="container">
         <div style="margin-bottom: 30px;">
@@ -491,6 +544,8 @@
         </div>
     </div>
 </footer>
+
+
 
 
 
